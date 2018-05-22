@@ -11,7 +11,7 @@ For example, to call all the functions callable without additional arguments pre
 
 current_file.py:
 ```
-from callifile.callifile import callifile
+from callifile.callifile import callifile as callifile
 import sys
 
 callifile(module=sys.modules[__name__], verbose=True)
