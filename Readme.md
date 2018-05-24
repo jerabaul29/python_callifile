@@ -11,10 +11,9 @@ For example, to call all the functions callable without additional arguments pre
 
 current_file.py:
 ```
-from callifile.callifile import callifile as callifile
-import sys
+from callifile.callifile_functions import callifile
 
-callifile(module=sys.modules[__name__], verbose=True)
+callifile()  # will call all functions in the current file
 ```
 
 ## Installation
@@ -37,3 +36,7 @@ twine upload dist/callifile-x.x.tar.gz
 ```
 
 *NOTE* that twine is using the credentials stored in .pypirc
+
+## How does this work?
+
+This is using the inspect module to inspect the stack (to know who is calling), and to inspect the objects defined in the module of interest (either file of module).

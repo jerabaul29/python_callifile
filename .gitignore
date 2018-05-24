@@ -1,3 +1,6 @@
 *.pyc
 *~
 *.swp
+.pytest_cache
+callifile.egg-info
+dist

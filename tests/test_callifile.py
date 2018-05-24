@@ -1,5 +1,5 @@
 from printind.printind_function import printi
-from callifile.callifile import callifile
+from callifile.callifile_functions import callifile
 import sys
 
 
@@ -12,9 +12,12 @@ def f_2():
 
 
 def test_callifile():
-    # careful: need the pattern_to_call here, otherwise recursive call!
     callifile(module=sys.modules[__name__], verbose=True, pattern_to_call="f_*")
 
 
+def test_callifile_full_auto():
+    callifile()
+
+
 if __name__ == '__main__':
-    callifile(module=sys.modules[__name__], verbose=True)
+    callifile()
