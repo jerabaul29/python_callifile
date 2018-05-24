@@ -18,7 +18,9 @@ callifile()  # will call all functions in the current file
 
 ## Installation
 
+```
 pip install callifile
+```
 
 ## Keywords
 
